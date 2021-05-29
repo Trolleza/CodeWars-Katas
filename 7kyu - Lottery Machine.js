@@ -37,3 +37,16 @@ function lottery(str){
   
   return removedDuplicatedDigits.length > 0 ? removedDuplicatedDigits : "One more run!"
 }
+
+//OU
+
+function lottery(str) {
+  let a = str
+    .split("")
+    .map((x) => +x) //ESSE + SIGNIFICA NÚMEROS
+    .filter((x) => x >= 0);
+
+  if (typeof a[0] === "number") {
+    return [...new Set(a)].join("");
+  } else return "One more run!";
+}
